@@ -13,14 +13,14 @@ public class BaseStaticDriver {
             driver.manage().window().maximize();
 
         }
-        public static void Bekle(int saniye){
+        public static void Wait(int second){
             try {
-                Thread.sleep(saniye*1000);
+                Thread.sleep(second*1000);
             }catch (Exception e){
                 e.printStackTrace();
             }
         }
-        public static void kapat(){
+        public static void Quit(){
             driver.quit();
         }
 
