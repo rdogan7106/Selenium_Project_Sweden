@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseStaticDriver {
     public static WebDriver driver;
         static {
@@ -11,6 +13,7 @@ public class BaseStaticDriver {
             System.setProperty("webdriver.chrome.driver","ChromeDriver/chromedriver.exe");
             driver = new ChromeDriver();
             driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         }
         public static void Wait(int second){
